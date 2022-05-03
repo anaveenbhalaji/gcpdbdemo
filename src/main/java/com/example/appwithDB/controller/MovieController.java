@@ -11,13 +11,12 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/movie")
 public class MovieController {
 
     @Autowired
     private MovieService movieService;
 
-    @GetMapping(value = "")
+    @GetMapping(value ="/")
     public List<Movie> getAllMovies() {return movieService.findAll();}
 
     @GetMapping(value = "/byName/{movieName}")
